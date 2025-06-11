@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>File Downloader</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f0f0f0; padding: 20px; }
+        h1 { color: #333; }
+        ul { list-style: none; padding: 0; }
+        li { margin: 10px 0; background: #fff; padding: 10px; border-radius: 5px; }
+        a { text-decoration: none; color: #007BFF; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <h1>Liste des fichiers disponibles :</h1>
+    <ul>
+        {% for file in files %}
+            <li>
+                {{ file }} - 
+                <a href="/download/{{ file }}">Télécharger</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
